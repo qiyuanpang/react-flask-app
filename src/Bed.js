@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 function BedPage() {
   const [currentTime, setCurrentTime] = useState(0);
@@ -8,14 +9,15 @@ function BedPage() {
       setCurrentTime(data.time);
     });
   }, []);
-
+  console.log(process.env)
   return (
     <div >
       <header className="App-header">
 
         ... no changes in this part ...
 
-        <p>The current time is {currentTime+' Bed???'}.</p>
+        <p>The current time is {currentTime+' Bed??????'}.</p>
+        <Link to={`${process.env.REACT_APP_PUBLIC_URL}`}>Go to Home</Link>
       </header>
     </div>
   );

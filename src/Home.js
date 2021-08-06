@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 function HomePage() {
   const [currentTime, setCurrentTime] = useState(0);
@@ -16,6 +17,7 @@ function HomePage() {
         ... no changes in this part ...
 
         <p>The current time is {currentTime+' Home???'}.</p>
+        <Link to={`${process.env.PUBLIC_URL}/bed`}>Go to Bed</Link>
       </header>
     </div>
   );
