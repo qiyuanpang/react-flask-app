@@ -7,6 +7,5 @@ app = Flask(__name__)
 def get_current_time():
     return {'time': time.time()}
 
-@app.route('/time')
-def get_current_time_v2():
-    return {'time': time.time()}
+if __name__ == '__main__':
+    app.run()
